@@ -1,0 +1,22 @@
+# vim files
+Session.vim
+
+# pycharm files
+jupyter/.idea
+
+# vivado logs
+*.str
+*.xpr
+
+# build files
+build
+fpga-xilinx-pynq-z2-handwriting-recognition.cache/
+fpga-xilinx-pynq-z2-handwriting-recognition.gen/
+fpga-xilinx-pynq-z2-handwriting-recognition.hw/
+fpga-xilinx-pynq-z2-handwriting-recognition.ip_user_files/
+fpga-xilinx-pynq-z2-handwriting-recognition.runs/
+fpga-xilinx-pynq-z2-handwriting-recognition.sim/
+fpga-xilinx-pynq-z2-handwriting-recognition.srcs/
+
+# jupyter generated files
+jupyter/handwriting-recognition/.ipynb_checkpoints
