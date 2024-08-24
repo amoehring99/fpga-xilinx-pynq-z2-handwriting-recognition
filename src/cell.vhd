@@ -20,39 +20,33 @@
 
 library ieee;
   use ieee.std_logic_1164.all;
-
-  -- Uncomment the following library declaration if using
-  -- arithmetic functions with Signed or Unsigned values
   use ieee.numeric_std.all;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
--- library UNISIM;
--- use UNISIM.VComponents.all;
+  -- package defined in utils.vhd
+  use work.utils.all;
 
 entity cell is
   port (
-    signal neighbor_in_top           : in    std_logic_vector(2 downto 0);
-    signal neighbor_in_top_left      : in    std_logic_vector(2 downto 0);
-    signal neighbor_in_left          : in    std_logic_vector(2 downto 0);
-    signal neighbor_in_bottom_left   : in    std_logic_vector(2 downto 0);
-    signal neighbor_in_bottom        : in    std_logic_vector(2 downto 0);
-    signal neighbor_in_bottom_right  : in    std_logic_vector(2 downto 0);
-    signal neighbor_in_right         : in    std_logic_vector(2 downto 0);
+    signal neighbor_in_top           : in    cell_state_t;
+    signal neighbor_in_top_left      : in    cell_state_t;
+    signal neighbor_in_left          : in    cell_state_t;
+    signal neighbor_in_bottom_left   : in    cell_state_t;
+    signal neighbor_in_bottom        : in    cell_state_t;
+    signal neighbor_in_bottom_right  : in    cell_state_t;
+    signal neighbor_in_right         : in    cell_state_t;
 
-    signal neighbor_out_top          : out   std_logic_vector(2 downto 0);
-    signal neighbor_out_top_left     : out   std_logic_vector(2 downto 0);
-    signal neighbor_out_left         : out   std_logic_vector(2 downto 0);
-    signal neighbor_out_bottom_left  : out   std_logic_vector(2 downto 0);
-    signal neighbor_out_bottom       : out   std_logic_vector(2 downto 0);
-    signal neighbor_out_bottom_right : out   std_logic_vector(2 downto 0);
-    signal neighbor_out_right        : out   std_logic_vector(2 downto 0)
+    signal neighbor_out_top          : out   cell_state_t;
+    signal neighbor_out_top_left     : out   cell_state_t;
+    signal neighbor_out_left         : out   cell_state_t;
+    signal neighbor_out_bottom_left  : out   cell_state_t;
+    signal neighbor_out_bottom       : out   cell_state_t;
+    signal neighbor_out_bottom_right : out   cell_state_t;
+    signal neighbor_out_right        : out   cell_state_t
   );
 end entity cell;
 
 architecture rtl of cell is
 
-  signal cell_state : std_logic;
+  signal cell_state_vector : cell_state_t;
 
 begin
 
