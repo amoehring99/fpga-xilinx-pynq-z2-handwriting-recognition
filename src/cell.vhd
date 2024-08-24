@@ -32,13 +32,21 @@ library ieee;
 
 entity cell is
   port (
-    signal neighbor_top : in    std_logic;
-    signal neighbor_top_left : in    std_logic;
-    signal neigbor_left : in    std_logic;
-    signal neighbor_bottom_left : in    std_logic;
-    signal neighbor_bottom : in    std_logic;
-    signal neighbor_bottom_right : in    std_logic;
-    signal neighbor_right : in    std_logic
+    signal neighbor_in_top           : in    std_logic_vector(2 downto 0);
+    signal neighbor_in_top_left      : in    std_logic_vector(2 downto 0);
+    signal neighbor_in_left          : in    std_logic_vector(2 downto 0);
+    signal neighbor_in_bottom_left   : in    std_logic_vector(2 downto 0);
+    signal neighbor_in_bottom        : in    std_logic_vector(2 downto 0);
+    signal neighbor_in_bottom_right  : in    std_logic_vector(2 downto 0);
+    signal neighbor_in_right         : in    std_logic_vector(2 downto 0);
+
+    signal neighbor_out_top          : out   std_logic_vector(2 downto 0);
+    signal neighbor_out_top_left     : out   std_logic_vector(2 downto 0);
+    signal neighbor_out_left         : out   std_logic_vector(2 downto 0);
+    signal neighbor_out_bottom_left  : out   std_logic_vector(2 downto 0);
+    signal neighbor_out_bottom       : out   std_logic_vector(2 downto 0);
+    signal neighbor_out_bottom_right : out   std_logic_vector(2 downto 0);
+    signal neighbor_out_right        : out   std_logic_vector(2 downto 0)
   );
 end entity cell;
 
