@@ -1,0 +1,15 @@
+name: mnist_ca
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pillow
+  - requests
+  - numpy
+  - matplotlib
+  - tensorflow
+  - ipython
+  - tqdm
+  - moviepy
+  - ffmpeg
