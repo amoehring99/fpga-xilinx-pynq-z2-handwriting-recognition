@@ -4,6 +4,9 @@ Session.vim
 # pycharm files
 jupyter/.idea
 
+# paper
+paper/
+
 # vivado logs
 *.str
 *.xpr
